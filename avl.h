@@ -20,13 +20,17 @@ extern "C" {
 struct Solmu;
 typedef struct Solmu *avl_puu;
 
-avl_puu vapauta(avl_puu puu);
-avl_puu etsi(char *X, avl_puu puu);
-avl_puu etsi_minimi(avl_puu puu);
-avl_puu etsi_maksimi(avl_puu puu);
-avl_puu lisaa(char *X, avl_puu puu);
+avl_puu vapauta(avl_puu solmu);
+avl_puu etsi(char *X, avl_puu solmu);
+avl_puu lisaa(char *X, avl_puu solmu);
+int korkeus(avl_puu solmu);
+int maksimikorkeus(int Lhs, int Rhs);
+avl_puu yks_rotaatio_vasen(avl_puu solmu);
+avl_puu yks_rotaatio_oikea(avl_puu solmu);
+avl_puu tupla_rotaatio_vasen(avl_puu solmu);
+avl_puu tupla_rotaatio_oikea(avl_puu solmu);
 char* tulosta(avl_puu P);
-
+void tulostaJarjestyksessa(avl_puu T);
 
 
 #ifdef	__cplusplus
