@@ -195,25 +195,3 @@ void tulostaJarjestyksessa(avl_puu T) {
         printf("sana: %s\n", T->sana);
         tulostaJarjestyksessa(T->oikea);
 }
-
-int main() {
-    avl_puu T = NULL;
-
-    T = lisaa("koira", T);
-    T = lisaa("ja", T);
-    T = lisaa("ja", T);
-    T = lisaa("kisu", T);
-    T = lisaa("aapeli", T);
-    T = lisaa("kisu", T);
-    T = lisaa("a", T);
-    T = lisaa("koira", T);
-
-
-    printf("min: %s, lkm %d \n", tulosta(etsi_minimi(T)), etsi_minimi(T)->lkm);
-    printf("keski: %s, lkm %d \n", tulosta(T), T->lkm);
-    printf("max: %s, lkm %d \n", tulosta(etsi_maksimi(T)), etsi_maksimi(T)->lkm);
-    
-    tulostaJarjestyksessa(T);
-
-    return 0;
-}
